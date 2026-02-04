@@ -1,6 +1,4 @@
-from keyword_listener import wait_for_keyword
+from clap_detector import detect_claps
 
-if wait_for_keyword("jarvis"):
-    print("✅ Keyword detected!")
-else:
-    print("❌ Keyword not detected.")
+claps = detect_claps()
+print("Detected claps:", claps)
