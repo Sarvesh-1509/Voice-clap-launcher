@@ -1,9 +1,22 @@
 import subprocess
-import webbrowser
+import time
 
 def launch_actions(actions):
+    processes = []
+
     for action in actions:
-        if action.startswith("http"):
-            webbrowser.open(action)
+        if action.startswith("chrome"):
+            # Always force a NEW Chrome window
+            proc = subprocess.Popen(
+                f'start "" {action}',
+                shell=True
+            )
         else:
-            subprocess.Popen(action, shell=True)
+            proc = subprocess.Popen(action, shell=True)
+
+        processes.append(proc)
+
+    # Give windows time to appear
+    time.sleep(3)
+
+    return processes
