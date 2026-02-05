@@ -10,7 +10,7 @@ def detect_claps(duration=3, threshold=0.15, min_gap=0.25):
     """
 
     fs = 44100
-    print("👏 Listening for claps...")
+    print(" Listening for claps...")
 
     audio = sd.rec(int(duration * fs), samplerate=fs, channels=1)
     sd.wait()

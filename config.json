@@ -1,0 +1,13 @@
+{
+  "keyword": "jarvis",
+  "actions": {
+    "2": [
+      "code"
+    ],
+    "3": [
+      "code",
+      "https://chat.openai.com"
+    ],
+    "4": ["notepad"]
+  }
+}
